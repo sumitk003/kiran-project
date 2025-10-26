@@ -1,0 +1,29 @@
+<% content_for :page_title do %>Contacts | Reconnector.app<% end %>
+
+<%= render Page::HeaderComponent.new('Contacts') do %>
+  <%= render SearchButtonComponent.new(text: 'Advanced search', url: new_contact_search_form_path) %>
+  <%= new_individual_button %>
+  <%= new_business_button %>
+<% end %>
+
+<% content_for :page_tabs do %>
+  <div></div>
+  <% contact_index_tabs %>
+<% end %>
+
+  <% if @contacts.empty? %>
+  <% else %>
+    <%= form_tag bulk_contact_emails_path, method: :get, id: 'bulk-email-form' do %>
+      <div class="mt-6 space-y-6">
+        <%= render partial: 'contacts/contact_search_forms/table', locals: { contacts: @contacts } %>
+      </div>
+      
+      <div class="mt-6 flex justify-end">
+        <%= submit_tag 'Send Email', class: 'inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500' %>
+      </div>
+    <% end %>
+  <% end %>
+
+<div class="w-full flex justify-center">
+  <%= pagination_navigation(@pagy) %>
+</div>

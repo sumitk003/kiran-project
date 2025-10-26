@@ -1,0 +1,135 @@
+name;unit_suite_shop;floor_level;street_number;street_name;city;state;postal_code;brochure_description;type;usages;notes;office_area;warehouse_area;showroom_area;storage_area;production_area;trading_area;land_area;hard_stand_yard_area;parking_spaces;zoning;lot_number;local_council;contract.type;country
+254;;;254;Waterworks Road;Ashgrove;Queensland;4060;;Commercial;Office;;;;;;;;;;;;;;Lease;Australia
+Ashgrove Central Plaza;;;223;Waterworks Road;Ashgrove;Queensland;4060;;Retail;Retail;;;;;;;;;;;;;;Lease;Australia
+;;;33;Ferrier Street;Narangba;Queensland;4504;;Industrial;Warehouse ;;;;;;;;;;;;;;Lease;Australia
+;;;26;Kenworth Place;Brendale;Queensland;4500;;Industrial;Land;;;;;;;;;;;;;;Lease;Australia
+;;;17-19;Bult Drive;Narangba;Queensland;4504;;Industrial;Warehouse ;;;;;;;;;;;;;;Lease;Australia
+MetroWest Estate Duplex;;;24;Bluestone Circuit;Seventeen Mile Rocks;Queensland;4073;;Industrial;Warehouse ;;;;;;;;;;;;;;Lease;Australia
+MetroWest Estate Duplex;1;Ground;24;Bluestone Circuit;Seventeen Mile Rocks;Queensland;4073;;Industrial;Warehouse ;;200;625;;;;;2991;490;;;L3/SP206828;;Lease;Australia
+MetroWest Estate Duplex;2;Ground;24;Bluestone Circuit;Seventeen Mile Rocks;Queensland;4073;;Industrial;Warehouse ;;200;625;;;;;2991;490;;;L3/SP206828;;Lease;Australia
+256 Leitchs Road;1;Ground;256;Leitchs Road;Brendale;Queensland;4500;;Industrial;Warehouse ;;;552;;;;;;;;;L1/SP165741;;Lease;Australia
+256 Leitchs Road;2;Ground;256;Leitchs Road;Brendale;Queensland;4500;;Industrial;Warehouse ;;;1126;;;;;;;;;L2/SP165741;;Lease;Australia
+256 Leitchs Road;3;Ground;256;Leitchs Road;Brendale;Queensland;4500;;Industrial;Warehouse ;;;1126;;;;;;;;;L3/SP165741;;Lease;Australia
+256 Leitchs Road;4;Ground;256;Leitchs Road;Brendale;Queensland;4500;;Industrial;Warehouse ;;;1102;;;;;;;;;L4/SP165741;;Lease;Australia
+;1;Ground;925;Nudgee Road;Banyo;Queensland;4014;;Industrial;Warehouse ;;;2755;;;;;;;;Gen Industry;1/GTP2050;;Lease;Australia
+;2;Ground;925;Nudgee Road;Banyo;Queensland;4014;;Industrial;Warehouse ;;;3018;;;;;;;;Gen Industry;2/GTP2050;;Lease;Australia
+;3;Ground;925;Nudgee Road;Banyo;Queensland;4014;;Industrial;Warehouse ;;;3325;;;;;;;;Gen Industry;3/GTP2050;;Lease;Australia
+;4;Ground;925;Nudgee Road;Banyo;Queensland;4014;;Industrial;Warehouse ;;;2985;;;;;;;;Gen Industry;4/GTP2050;;Lease;Australia
+;5;Ground;925;Nudgee Road;Banyo;Queensland;4014;;Industrial;Warehouse ;;;2779;;;;;;;;Gen Industry;5/GTP2050;;Lease;Australia
+;;Ground;187;Hyde Road;Yeroonga;Queensland;4104;;Industrial;Factory;;;2510;;;;;;;;Gen Industry;23/RP813853;;Lease;Australia
+;;Ground;44;Station Road;Yeerongpilly;Queensland;4105;;Commercial;Office Retail;;;;;;;;;;;Gen Industry;1-2/RP115818;;Lease;Australia
+;1;Ground;13;Hinkler Court;Brendale;Queensland;4500;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;2;Ground;13;Hinkler Court;Brendale;Queensland;4500;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;475;Newman Road;Geebung;Queensland;4034;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;453;Newman Road;Geebung;Queensland;4034;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;24;Counihan Road;Seventeen Mile Rocks;Queensland;4073;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;451;Newman Road;Geebung;Queensland;4034;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;477;Newman Road;Geebung;Queensland;4034;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;33;Cordova Street;Milton;Queensland;4064;;Commercial;Retail;;;;;;;;;;;;;;;Australia
+;;Ground;111;Railway Street;Strathpine Avenue;Queensland;4500;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;483;Newman Road;Geebung;Queensland;4034;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;23;Sandmere Road;Pinkemba;Queensland;4008;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;2;Ground;22;Moonbi Street;Brendale;Queensland;4500;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;3;Ground;22;Moonbi Street;Brendale;Queensland;4500;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;4;Ground; Lot 1 of 133;South Pine Road;Brendale;Queensland;4500;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;1;Ground;24;Deakin Street;Brendale;Queensland;4500;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;2;Ground;24;Deakin Street;Brendale;Queensland;4500;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;3;Ground;24;Deakin Street;Brendale;Queensland;4500;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;4;Ground;24;Deakin Street;Brendale;Queensland;4500;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;5;Ground;24;Deakin Street;Brendale;Queensland;4500;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;6;Ground;24;Deakin Street;Brendale;Queensland;4500;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;7;Ground;24;Deakin Street;Brendale;Queensland;4500;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;12;Deakin Street;Brendale;Queensland;4500;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;25;Deakin Street;Brendale;Queensland;4500;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;32;Deakin Street;Brendale;Queensland;4500;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;36;Deakin Street;Brendale;Queensland;4500;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;42;Deakin Street;Brendale;Queensland;4500;;Industrial;Retail;;;;;;;;;;;;;;;Australia
+;;Ground;41;Cook Court;North Lakes;Queensland;4509;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;47;Cook Court;North Lakes;Queensland;4509;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;51;Cook Court;North Lakes;Queensland;4509;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;30;Huntington Place;Banyo;Queensland;4014;;Industrial;Warehouse ;;382;888;;;;;;;;;;;;Australia
+;;Ground;143;St Vincents Road;Virginia;Queensland;4014;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;153;St Vincents Road;Virginia;Queensland;4014;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;340;Curtin Avenue West;Eagle Farm;Queensland;4009;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;34;French Avenue;Brendale;Queensland;4500;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;21;Kingsbury Street;Brendale;Queensland;4500;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;89;Flinders Parade;North Lakes;Queensland;4509;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;100;Northlink Place;Virginia;Queensland;4014;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;76;Northlink Place;Virginia;Queensland;4014;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;56;Kremzow Road;Brendale;Queensland;4500;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;109;Buchanan Road;Banyo;Queensland;4014;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;146;Crockford Street;Northgate;Queensland;4013;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;20;Millway Street;Kedron;Queensland;4031;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;13;Prospect Street;Fortitude Valley;Queensland;4006;;Commercial;Retail;;;;;;;;;;;;;;;Australia
+;;Ground;55;Hayward Street;Stafford;Queensland;4053;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;92;Granite Street;Geebung;Queensland;4034;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;102;Granite Street;Geebung;Queensland;4034;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;121;Granite Street;Geebung;Queensland;4034;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;18;Morrisby Street;Geebung;Queensland;4034;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;33;Morrisby Street;Geebung;Queensland;4034;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;959;Nudgee Road;Banyo;Queensland;4014;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;99;Granite Street;Geebung;Queensland;4034;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;105;Granite Street;Geebung;Queensland;4034;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;52;Zillmere Road;Boondall;Queensland;4034;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;68 (aka 80);Lisgar Street;Virginia;Queensland;4014;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;46;Millway Street;Kedron;Queensland;4031;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;391;Newman Road;Geebung;Queensland;4034;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;7;Babarra Street;Stafford;Queensland;4053;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;19-21;Harvton Street;Stafford;Queensland;4053;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;65;Dagmar Street;Holland Park West;Queensland;4121;;Residential;House;;;;;;;;;;;;;;;Australia
+;;Ground;67;Dagmar Street;Holland Park West;Queensland;4121;;Residential;House;;;;;;;;;;;;;;;Australia
+;;Ground;223;Robinson Road East;Geebung;Queensland;4034;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;229;Robinson Road East;Geebung;Queensland;4034;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;72;Eureka Road;Kelvin Grove;Queensland;4059;;Residential;Retail;;;;;;;;;;;;;;;Australia
+;;Ground;74;Eureka Road;Kelvin Grove;Queensland;4059;;Residential;Retail;;;;;;;;;;;;;;;Australia
+;;Ground;113;Delta Street;Geebung;Queensland;4034;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;119;Delta Street;Geebung;Queensland;4034;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;50;Prosperity Place;Geebung;Queensland;4034;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;60;Prosperity Place;Geebung;Queensland;4034;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;70;Prosperity Place;Geebung;Queensland;4034;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;90;Prosperity Place;Geebung;Queensland;4034;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;112;Brisbane Road;Booval;Queensland;4034;;Commercial;Retail;;;;;;;;;;;;;;;Australia
+;;Ground;9;Newton Street;Virginia;Queensland;4014;;Industrial;Land;;;;;;;;;;;;;;;Australia
+;;Ground;20;Robinson Road East;Virginia;Queensland;4014;;Industrial;Retail;;;;;;;;;;;;;;;Australia
+;;Ground;26;Robinson Road East;Virginia;Queensland;4014;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;2043;Sandgate Road;Virginia;Queensland;4014;;Commercial;Retail;;;;;;;;;;;;;;;Australia
+;;Ground;24;Armada Place;Banyo;Queensland;4014;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;73;Depot Street;Banyo;Queensland;4014;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;17;Huntington Place;Banyo;Queensland;4014;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;113;Bancroft Road;Pinkenba;Queensland;4008;;Industrial;Warehouse ;;;;;;;;;;;In2 General Industry B;;;;Australia
+;;Ground;1;LavarackAvenue;Eagle Farm;Queensland;4009;;Industrial;Warehouse ;;;;;;;;;;;In2 General Industry B;;;;Australia
+;;Ground;25;Buchanan Road;Banyo;Queensland;4014;;Industrial;Warehouse ;;;;;;;;;;;General Industry;;;;Australia
+;1;Ground;459;Tufnell Road;Banyo;Queensland;4014;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;2;Ground;459;Tufnell Road;Banyo;Queensland;4014;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;;Ground;181;Cobalt Street;Carole Park;Queensland;4300;;Industrial;Warehouse ;;;;;;;;;;;;;;;Australia
+;20;;344;Queens Street;Brisbane;Queensland;4000;;Commercial;Office;;;;;;;;;;;;;;;Australia
+;21;;344;Queens Street;Brisbane;Queensland;4000;;Commercial;Office;;;;;;;;;;;;;;;Australia
+;51;;344;Queens Street;Brisbane;Queensland;4000;;Commercial;Office;;;;;;;;;;;;;;;Australia
+;13;;344;Queens Street;Brisbane;Queensland;4000;;Commercial;Office;;;;;;;;;;;;;;;Australia
+;37;;344;Queens Street;Brisbane;Queensland;4000;;Commercial;Office;;;;;;;;;;;;;;;Australia
+;38;;344;Queens Street;Brisbane;Queensland;4000;;Commercial;Office;;;;;;;;;;;;;;;Australia
+;39;;344;Queens Street;Brisbane;Queensland;4000;;Commercial;Office;;;;;;;;;;;;;;;Australia
+;40;;344;Queens Street;Brisbane;Queensland;4000;;Commercial;Office;;;;;;;;;;;;;;;Australia
+;13;;344;Queens Street;Brisbane;Queensland;4000;;Commercial;Office;;;;;;;;;;;;;;;Australia
+;39;;344;Queens Street;Brisbane;Queensland;4000;;Commercial;Office;;;;;;;;;;;;;;;Australia
+;20;;344;Queens Street;Brisbane;Queensland;4000;;Commercial;Office;;;;;;;;;;;;;;;Australia
+;39;;344;Queens Street;Brisbane;Queensland;4000;;Commercial;Office;;;;;;;;;;;;;;;Australia
+;40;;15;James Street;Fortitude Valley;Queensland;4006;;Commercial;Retail;;;;;;;;;;;;;;;Australia
+;46;;25;James Street;Fortitude Valley;Queensland;4006;;Commercial;Retail;;;;;;;;;;;;;;;Australia
+;49;;25;James Street;Fortitude Valley;Queensland;4006;;Commercial;Retail;;;;;;;;;;;;;;;Australia
+;50;;25;James Street;Fortitude Valley;Queensland;4006;;Commercial;Retail;;;;;;;;;;;;;;;Australia
+;41;;25;James Street;Fortitude Valley;Queensland;4006;;Commercial;Retail;;;;;;;;;;;;;;;Australia
+;42;;25;James Street;Fortitude Valley;Queensland;4006;;Commercial;Retail;;;;;;;;;;;;;;;Australia
+;43;;25;James Street;Fortitude Valley;Queensland;4006;;Commercial;Retail;;;;;;;;;;;;;;;Australia
+;44;;25;James Street;Fortitude Valley;Queensland;4006;;Commercial;Retail;;;;;;;;;;;;;;;Australia
+;45;;25;James Street;Fortitude Valley;Queensland;4006;;Commercial;Retail;;;;;;;;;;;;;;;Australia
+;47;;25;James Street;Fortitude Valley;Queensland;4006;;Commercial;Retail;;;;;;;;;;;;;;;Australia
+;48;;25;James Street;Fortitude Valley;Queensland;4006;;Commercial;Retail;;;;;;;;;;;;;;;Australia
+;;;12;Cunningham Street;Newstead;Queensland;4006;;Commercial;Retail;;;;;;;;;;;;;;;Australia
+;;;12;Helen Street;Tenerife;Queensland;4005;;Commercial;Office;;;;;;;;;;;;;;;Australia
+;;;27;Wyandra Street;Tenerife;Queensland;4005;;Commercial;Retail;;;;;;;;;;;;;;;Australia
+;;;6;Connor Street;Fortitude Valley;Queensland;4006;;Commercial;Land;;;;;;;;;;;;;;;Australia
+;;;31;James Street;Fortitude Valley;Queensland;4006;;Commercial;Retail;;;;;;;;;;;;;;;Australia
+;;;60;James Street;Fortitude Valley;Queensland;4006;;Commercial;Retail;;;;;;;;;;;;;;;Australia
+;;;23;James Street;Fortitude Valley;Queensland;4006;;Commercial;Retail;;;;;;;;;;;;;;;Australia
+;;;47;Morrisby Street;Geebung;Queensland;4034;;Industrial;Warehouse ;;;1300;;;;;;;;;;;;Australia

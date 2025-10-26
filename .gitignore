@@ -1,0 +1,17 @@
+ 
+# Ignore the .env file (contains environment variables)
+.env
+
+# Ignore the vendor directory (contains Composer dependencies)
+/vendor/
+
+# Ignore the node_modules directory (contains Node.js dependencies)
+/node_modules/
+
+# Ignore all log files
+/log/
+*.log
+
+
+# Ignore all files in the storage directory
+/storage/

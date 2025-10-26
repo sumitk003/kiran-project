@@ -1,0 +1,8 @@
+<!-- app/views/contacts/contact_search_forms/new.html.erb -->
+<% content_for :page_title do %>
+  Advanced Contact Search | Reconnector.app
+<% end %>
+
+<%= render Page::HeaderComponent.new('Contact search') %>
+
+<%= render partial: 'contacts/contact_search_forms/form', locals: { contact_search_form: @contact_search_form } %>
