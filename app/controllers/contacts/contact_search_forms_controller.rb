@@ -13,23 +13,16 @@ module Contacts
 
     def index
       @contact_search_form = Contacts::ContactSearchForm.new(contact_search_form_params)
-      debugger
       @pagy, @contacts = pagy(filtered_contacts)
     end
 
     private
 
     def filtered_contacts
-      debugger
       contacts = current_agent.contacts.includes(:agent, :classifications)
 
       contacts = apply_classification_filter(contacts) if selected_classifications.present?
       contacts = apply_filter_param(contacts) if params[:filter].present?
-
-      debugger
-      
-
-
       contacts = case params[:filter]
                 when 'businesses'
                   contacts.order(Arel.sql("COALESCE(business_name, '') ASC"))
