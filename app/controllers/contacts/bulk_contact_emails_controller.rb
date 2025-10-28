@@ -13,6 +13,15 @@ module Contacts
         (@current_agent.microsoft_graph_token_missing? || @current_agent.microsoft_graph_token.expired?)
         redirect_to edit_agent_path(@current_agent), alert: 'You are not connected to Microsoft Office online. Please connect to Microsoft Graph to send emails.'
       else
+        # Store contact_ids in session for the create action
+        session[:bulk_email_contact_ids] = params[:contact_ids] if params[:contact_ids].present?
+        
+        # If no contact_ids provided, redirect back to contact search
+        if params[:contact_ids].blank? && session[:bulk_email_contact_ids].blank?
+          redirect_to contact_search_forms_path, alert: 'Please select contacts to send emails to.'
+          return
+        end
+        
         @bulk_contact_email = BulkContactEmail.new(body: default_email_body)
         @properties = current_agent.properties.limit(30).order(created_at: :desc)
         set_tab_option(:contacts)
@@ -22,6 +31,33 @@ module Contacts
     # POST /bulk_contact_emails
     def create
       set_tab_option(:contacts)
+      
+      # Check if contacts are selected
+      if @contacts.empty?
+        @bulk_contact_email = BulkContactEmail.new(bulk_contact_email_params)
+        @bulk_contact_email.errors.add(:contacts, "Please select at least one contact to send emails to.")
+        @properties = current_agent.properties.limit(30).order(created_at: :desc)
+        
+        respond_to do |format|
+          format.html { render :new, status: :unprocessable_entity }
+          format.json { render json: @bulk_contact_email.errors, status: :unprocessable_entity }
+        end
+        return
+      end
+      
+      # Check if properties are selected
+      @bulk_contact_email = BulkContactEmail.new(bulk_contact_email_params)
+      
+      if @bulk_contact_email.property_ids.blank?
+        @bulk_contact_email.errors.add(:property_ids, "Please select at least one property from the list above to send information about.")
+        @properties = current_agent.properties.limit(30).order(created_at: :desc)
+        
+        respond_to do |format|
+          format.html { render :new, status: :unprocessable_entity }
+          format.json { render json: @bulk_contact_email.errors, status: :unprocessable_entity }
+        end
+        return
+      end
       
       respond_to do |format|
         if send_bulk_emails
@@ -38,7 +74,18 @@ module Contacts
     private
 
     def set_contacts
-      @contacts = current_agent.contacts.where(id: params[:contact_ids])
+      # Get contact_ids from params or session
+      contact_ids = params[:contact_ids] || session[:bulk_email_contact_ids]
+      
+      if contact_ids.blank?
+        @contacts = []
+        return
+      end
+      
+      @contacts = current_agent.contacts.where(id: contact_ids)
+      
+      # Clear session after use
+      session.delete(:bulk_email_contact_ids) if session[:bulk_email_contact_ids]
     end
 
     def default_email_body
@@ -67,7 +114,8 @@ module Contacts
         contact: contact,
         agent: @current_agent,
         body: @bulk_contact_email.body,
-        attach_brochures: @bulk_contact_email.attach_brochures
+        attach_brochures: @bulk_contact_email.attach_brochures,
+        property_ids: @bulk_contact_email.property_ids
       )
 
       # Attach files if any
@@ -97,9 +145,17 @@ module Contacts
     end
 
     def bulk_contact_email_params
-      params.require(:bulk_contact_email)
-            .permit(:body, :attach_brochures, files: [], property_ids: [])
-            .merge({ agent: @current_agent, contacts: @contacts })
+      permitted_params = params.require(:bulk_contact_email)
+                               .permit(:body, :attach_brochures, files: [])
+      
+      # Get property_ids from top-level params (since checkboxes are outside the form model)
+      property_ids = params[:property_ids] || []
+      
+      permitted_params.merge({ 
+        agent: @current_agent, 
+        contacts: @contacts,
+        property_ids: property_ids
+      })
     end
   end
 end
