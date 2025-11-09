@@ -7,7 +7,9 @@ module AppServices
     class MatchingPropertiesEmailer
       def initialize(matching_properties_email_params)
         @matching_properties_email_params = matching_properties_email_params
-        @matching_properties_email = MatchingPropertiesEmail.new(@matching_properties_email_params)
+        # Use existing matching_email if provided, otherwise create new one
+        @matching_properties_email = matching_properties_email_params[:matching_properties_email] || 
+                                     MatchingPropertiesEmail.new(@matching_properties_email_params.except(:matching_properties_email))
         @brochures = []
         @downloaded_files = []
       end
@@ -61,12 +63,16 @@ module AppServices
       end
 
       def send_email
+        # Ensure the matching email record is persisted to get the ID
+        @matching_properties_email.save! unless @matching_properties_email.persisted?
+        
         ::Contacts::EmailMatchingPropertiesJob.perform_now(
           agent.id,
           contact.id,
           @matching_properties_email.property_ids,
           email,
-          attached_files
+          attached_files,
+          @matching_properties_email.id
         )
       end
 
@@ -80,6 +86,7 @@ module AppServices
           layout: 'mailer',
           locals: {
             agent: agent,
+            contact: contact,
             properties: properties,
             body: @matching_properties_email.body.to_trix_html
           },

@@ -5,6 +5,13 @@ module Properties
     def perform(agent_id, contact_id, property_ids, body, attachments = nil)
       agent        = find_agent(agent_id)
       contact      = find_contact(contact_id)
+      
+      # Check if email is suppressed
+      if EmailSuppression.suppressed?(contact.email, agent.account.id)
+        Rails.logger.info("[#{self.class}] Skipping email to Contact (id: #{contact_id}) - email is suppressed")
+        return
+      end
+      
       to = contact.email
       to = 'grant.barry@free.fr' unless Rails.env.production?
       access_token = agent.microsoft_graph_token.access_token if agent.microsoft_graph_token?

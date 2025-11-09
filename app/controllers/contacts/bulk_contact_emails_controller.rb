@@ -109,6 +109,12 @@ module Contacts
     end
 
     def send_email_to_contact(contact)
+      # Check if email is suppressed before sending
+      if EmailSuppression.suppressed?(contact.email, @current_agent.account.id)
+        Rails.logger.info("[BulkContactEmailsController] Skipping email to Contact (id: #{contact.id}) - email is suppressed")
+        return
+      end
+
       # Create individual matching properties email for each contact
       matching_email = MatchingPropertiesEmail.create!(
         contact: contact,

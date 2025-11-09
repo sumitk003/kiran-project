@@ -118,6 +118,11 @@ Rails.application.routes.draw do
   # Microsoft Graph Auth routes
   match '/auth/:provider/callback', to: 'microsoft/graph/auth#callback', via: %i[get post]
 
+  # Unsubscribe routes
+  get 'unsubscribe', to: 'unsubscribes#show', as: 'unsubscribe'
+  post 'unsubscribe', to: 'unsubscribes#create'
+  get 'unsubscribe/success', to: 'unsubscribes#success', as: 'unsubscribe_success'
+
   # Overlord routes
   namespace :console do
     resources :access_requests, only: %i[index show destroy]

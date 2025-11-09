@@ -68,3 +68,15 @@
 <% end %>
 
 <p class="text-sm text-gray-500 mb-4">You are receiving this email because you have contacted <%= agent.account.company_name %> and you are currently searching for commercial, industrial and/or retail properties.</p>
+
+<!-- Unsubscribe link -->
+<div class="mt-6 pt-4 border-t border-gray-200">
+  <p class="text-xs text-gray-400 text-center mb-2">
+    If you no longer wish to receive these emails, you can 
+    <%= link_to 'unsubscribe here', unsubscribe_url(
+      email: contact.email,
+      account_id: agent.account.id,
+      token: generate_unsubscribe_token(contact.email, agent.account.id)
+    ), class: 'text-blue-600 underline' %>.
+  </p>
+</div>

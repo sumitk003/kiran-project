@@ -1,3 +1,5 @@
+require 'digest'
+
 module ApplicationHelper
   def menu_items
     default_classes = 'hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium text-gray-900'
@@ -19,5 +21,9 @@ module ApplicationHelper
       concat link_to('Enquiries', listing_enquiries_path, class: @nav_menu_option == :enquiries ? current_classes : default_classes)
       concat link_to('Contacts', contacts_path, class: @nav_menu_option == :contacts ? current_classes : default_classes)
     end
+  end
+
+  def generate_unsubscribe_token(email, account_id)
+    Digest::SHA256.hexdigest("#{email}#{account_id}#{Rails.application.credentials.secret_key_base}")
   end
 end

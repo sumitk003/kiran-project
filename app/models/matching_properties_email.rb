@@ -9,6 +9,18 @@ class MatchingPropertiesEmail < ApplicationRecord
 
   validates :agent, :contact, :body, presence: true
   validates :property_ids, length: { minimum: 1, message: 'You must select at lease one property' }
+
+  scope :sent, -> { where.not(email_sent_at: nil) }
+  scope :not_sent, -> { where(email_sent_at: nil) }
+  scope :recent, -> { order(created_at: :desc) }
+
+  def sent?
+    email_sent_at.present?
+  end
+
+  def sent_at
+    email_sent_at
+  end
 end
 
 # == Schema Information
