@@ -17,12 +17,18 @@ module Properties
       access_token = agent.microsoft_graph_token.access_token if agent.microsoft_graph_token?
       subject = "#{agent.account.company_name} listings"
 
-      email_service = AppServices::Email::MicrosoftGraphProvider.new({
+      # Use LetterOpenerProvider in development, MicrosoftGraphProvider in production
+      email_service_class = Rails.env.development? ? 
+        AppServices::Email::LetterOpenerProvider : 
+        AppServices::Email::MicrosoftGraphProvider
+
+      email_service = email_service_class.new({
                      access_token: access_token,
                      to: to,
                      subject: subject,
                      body: body,
-                     attachments: attachments
+                     attachments: attachments,
+                     from: agent.email || 'noreply@example.com'
                    })
 
       response = email_service.send_message

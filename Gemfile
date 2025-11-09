@@ -50,6 +50,8 @@ group :development do
   gem 'spring'
 
   gem 'annotate'
+  # Preview emails in browser instead of sending them
+  gem 'letter_opener'
 end
 
 group :test do
