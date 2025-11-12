@@ -6,10 +6,12 @@ module AppServices
   module Contacts
     class MatchingPropertiesEmailer
       def initialize(matching_properties_email_params)
+        
         @matching_properties_email_params = matching_properties_email_params
         # Use existing matching_email if provided, otherwise create new one
         @matching_properties_email = matching_properties_email_params[:matching_properties_email] || 
-                                     MatchingPropertiesEmail.new(@matching_properties_email_params.except(:matching_properties_email))
+                                     MatchingPropertiesEmail.new(@matching_properties_email_params.except(:matching_properties_email, :custom_template_flag))
+        @custom_template_flag = matching_properties_email_params[:custom_template_flag] || false
         @brochures = []
         @downloaded_files = []
       end
@@ -95,7 +97,9 @@ module AppServices
       end
 
       def partial_path
-        File.join('contacts', @matching_properties_email.class.to_s.pluralize.underscore, 'email')
+        
+        template_name = @custom_template_flag ? 'unsubscribe_email' : 'email'
+        File.join('contacts', @matching_properties_email.class.to_s.pluralize.underscore, template_name)
       end
 
       def agent

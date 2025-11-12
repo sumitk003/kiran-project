@@ -16,13 +16,18 @@ module Contacts
         # Store contact_ids in session for the create action
         session[:bulk_email_contact_ids] = params[:contact_ids] if params[:contact_ids].present?
         
+        
+        # Store custom_template_flag in session if provided
+        session[:bulk_email_custom_template_flag] = params[:bulk_contact_email][:custom_template_flag] if params[:bulk_contact_email]&.dig(:custom_template_flag).present?
+        
         # If no contact_ids provided, redirect back to contact search
         if params[:contact_ids].blank? && session[:bulk_email_contact_ids].blank?
           redirect_to contact_search_forms_path, alert: 'Please select contacts to send emails to.'
           return
         end
         
-        @bulk_contact_email = BulkContactEmail.new(body: default_email_body)
+        custom_template_flag = params[:bulk_contact_email]&.dig(:custom_template_flag) == 'true' || session[:bulk_email_custom_template_flag] == 'true'
+        @bulk_contact_email = BulkContactEmail.new(body: default_email_body, custom_template_flag: custom_template_flag)
         @properties = current_agent.properties.limit(30).order(created_at: :desc)
         set_tab_option(:contacts)
       end
@@ -86,6 +91,7 @@ module Contacts
       
       # Clear session after use
       session.delete(:bulk_email_contact_ids) if session[:bulk_email_contact_ids]
+      session.delete(:bulk_email_custom_template_flag) if session[:bulk_email_custom_template_flag]
     end
 
     def default_email_body
@@ -136,6 +142,7 @@ module Contacts
         matching_properties_email_params(matching_email)
       )
       
+      
       email_service.send_matching_properties_email
     end
 
@@ -146,21 +153,29 @@ module Contacts
         files: @bulk_contact_email.files,
         property_ids: @bulk_contact_email.property_ids,
         agent: @current_agent,
-        contact: matching_email.contact
+        contact: matching_email.contact,
+        custom_template_flag: @bulk_contact_email.custom_template_flag
       }
     end
 
     def bulk_contact_email_params
+      
       permitted_params = params.require(:bulk_contact_email)
-                               .permit(:body, :attach_brochures, files: [])
+                               .permit(:body, :attach_brochures, :custom_template_flag, files: [])
       
       # Get property_ids from top-level params (since checkboxes are outside the form model)
       property_ids = params[:property_ids] || []
       
+      # Convert custom_template_flag string to boolean
+      # Check params first, then session as fallback
+      custom_template_flag_value = permitted_params[:custom_template_flag] || session[:bulk_email_custom_template_flag]
+      custom_template_flag = custom_template_flag_value == 'true' || custom_template_flag_value == true || custom_template_flag_value == '1'
+      
       permitted_params.merge({ 
         agent: @current_agent, 
         contacts: @contacts,
-        property_ids: property_ids
+        property_ids: property_ids,
+        custom_template_flag: custom_template_flag
       })
     end
   end

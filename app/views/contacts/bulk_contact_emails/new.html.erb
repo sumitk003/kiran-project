@@ -22,6 +22,7 @@
 <%= render ErrorComponent.new(@bulk_contact_email.errors) if @bulk_contact_email.errors.any? %>
 
 <%= form_with model: @bulk_contact_email, url: bulk_contact_emails_path, local: true, multipart: true do |form| %>
+  <%= form.hidden_field :custom_template_flag, value: @bulk_contact_email.custom_template_flag %>
   <div class="space-y-6 w-full">
     <%= render Forms::ContainerComponent.new do %>
       <%= render Forms::SectionComponent.new do %>
@@ -31,36 +32,6 @@
             <%= form.rich_text_area :body, rows: 8, class: 'mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md' %>
           </div>
 
-          <div class="sm:col-span-6 space-y-4 mb-4">
-            <div class="text-base font-medium text-gray-900" aria-hidden="true">Attachments</div>
-
-            <div class="relative flex items-start">
-              <div class="flex h-5 items-center">
-                <%= form.check_box :attach_brochures, class: 'h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500' %>
-              </div>
-              <div class="ml-3 text-sm">
-                <label for="brochure" class="font-medium text-gray-700">Attach brochures</label>
-                <span id="attach-brochure" class="text-gray-500"><span class="sr-only">Attach brochure </span>so that contacts can see the property details offline.</span>
-              </div>
-            </div>
-
-            <label for="cover-photo" class="block text-sm font-medium text-gray-700">Additional files</label>
-            <div class="mt-1 flex justify-center rounded-md border-2 border-dashed border-gray-300 px-6 pt-5 pb-6">
-              <div class="space-y-1 text-center">
-                <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
-                  <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-                <div class="flex text-sm text-gray-600">
-                  <%= form.label :files, class: 'relative cursor-pointer rounded-md bg-white font-medium text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:text-indigo-500' do %>
-                    <span>Upload one or more files</span>
-                    <%= form.file_field :files, multiple: true, class: 'sr-only' %>
-                  <% end %>
-                  <p class="pl-1">or drag and drop</p>
-                </div>
-                <p class="text-xs text-gray-500">Any files up to 10MB</p>
-              </div>
-            </div>
-          </div>
         <% end %>
       <% end %>
 

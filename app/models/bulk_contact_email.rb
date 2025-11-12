@@ -11,6 +11,7 @@ class BulkContactEmail
   attribute :property_ids, default: []
   attribute :agent
   attribute :contacts, default: []
+  attribute :custom_template_flag, :boolean, default: false
 
   validates :body, presence: true
   validates :contacts, presence: true
