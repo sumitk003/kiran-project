@@ -14,6 +14,7 @@
   <% if @contacts.empty? %>
   <% else %>
     <%= form_tag bulk_contact_emails_path, method: :get, id: 'bulk-email-form' do %>
+      <%= hidden_field_tag 'bulk_contact_email[custom_template_flag]', 'true' %>
       <div class="mt-6 space-y-6">
         <%= render partial: 'contacts/contact_search_forms/table', locals: { contacts: @contacts } %>
       </div>

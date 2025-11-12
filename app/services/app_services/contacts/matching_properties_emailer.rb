@@ -95,7 +95,13 @@ module AppServices
       end
 
       def partial_path
-        File.join('contacts', @matching_properties_email.class.to_s.pluralize.underscore, 'email')
+        debugger
+        if 
+          # Path to the unsubscribe email template
+          File.join('contacts', 'matching_properties_emails', 'unsubscribe_email')
+        else
+          File.join('contacts', @matching_properties_email.class.to_s.pluralize.underscore, 'email')
+        end
       end
 
       def agent
